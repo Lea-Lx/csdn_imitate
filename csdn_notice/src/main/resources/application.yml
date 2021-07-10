@@ -1,0 +1,32 @@
+server:
+  port: 9014
+spring:
+  application:
+    name: csdn-notice
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.198.128:3306/tensquare_notice?characterEncoding=utf-8
+    username: root
+    password: root
+  redis:
+    host: 192.168.198.128
+  rabbitmq:
+    host: 192.168.198.128
+mybatis-plus:
+  type-aliases-package: com.csdn.notice.pojo
+  global-config:
+    id-type: 1
+    db-column-underline: false
+    refresh-mapper: true
+    configuration:
+      map-underscore-to-camel-case: true
+      cache-enabled: true
+      lazyLoadingEnabled: true #延时加载的开关
+      multipleResultSetsEnabled: true #开启延时加载，否则按需加载属性
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句,调试用
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true

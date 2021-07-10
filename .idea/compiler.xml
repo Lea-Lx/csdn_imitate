@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="csdn_user" />
+        <module name="csdn_eureka" />
+        <module name="csdn_encrypt" />
+        <module name="csdn_common" />
+        <module name="SSM" />
+        <module name="csdn_article" />
+        <module name="csdn_notice" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="csdn_article" options="-parameters" />
+      <module name="csdn_common" options="-parameters" />
+      <module name="csdn_encrypt" options="-parameters" />
+      <module name="csdn_eureka" options="-parameters" />
+      <module name="csdn_notice" options="-parameters" />
+      <module name="csdn_user" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,21 @@
+server:
+  port: 9013
+spring:
+  application:
+    name: csdn-encrypt
+
+zuul:
+  routes:
+    csdn-article:
+      path: /article/**
+      serviceId: csdn-article
+      strip-prefix: true
+      sentiviteHeaders:
+      customSensitiveHeaders: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
